@@ -1,0 +1,1396 @@
+*,
+html {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	color: #fff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	background: #000817;
+}
+
+.burger-btn {
+	display: none;
+	width: 30px;
+	height: 30px;
+	border: none;
+	background: transparent;
+	position: relative;
+	transform: translateY(100%);
+	right: 5px;
+	cursor: pointer;
+	top: -15px;
+}
+
+.burger-btn span {
+	position: absolute;
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+	transform: translateY(-50%);
+	left: 5px;
+	transition: transform 0.5s, opacity, background-color 0.5s;
+	border-radius: 5px;
+	will-change: transform;
+	left: 0;
+}
+
+.burger-btn span:nth-child(1) {
+	transform: translateY(-10px);
+}
+
+.burger-btn span:nth-child(3) {
+	transform: translateY(8px);
+}
+
+.header.open .burger-btn span:nth-child(1) {
+	transform: translateY(0) rotate(-45deg);
+}
+
+.header.open .burger-btn span:nth-child(2) {
+	opacity: 0;
+}
+
+.header.open .burger-btn span:nth-child(3) {
+	transform: translateY(0) rotate(45deg);
+}
+
+.container {
+	max-width: 1255px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+li {
+	list-style: none;
+	color: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	outline: none;
+}
+
+button {
+	outline: none;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+select {
+	outline: none;
+	border: none;
+}
+
+.header__wrapper {
+	border-radius: 0px 0px 14px 14px;
+	background: #262630;
+}
+.header__top {
+	display: flex;
+	justify-content: space-between;
+	padding: 25px 0;
+}
+
+.header__top-left {
+	display: flex;
+	align-items: center;
+}
+
+.header__top-right {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	margin-right: 34px;
+}
+
+.header__label {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.header__input {
+	border-radius: 14px;
+	border: 1px solid var(--orange, #fa6400);
+	background: #3f3f4c;
+	padding: 11px 40px 11px 16px;
+	width: 380px;
+	color: #fff;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.header__input::placeholder {
+	color: #666877;
+	font-family: 'Inter', sans-serif;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.header__search {
+	position: absolute;
+	right: 5px;
+}
+.header__langs,
+.header__langs-mob {
+	background: transparent;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+	margin-right: 20px;
+}
+
+.header__langs-mob {
+	display: none;
+}
+
+.header__langs {
+	padding: 5px;
+}
+
+.header__langs option {
+	color: #fff;
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.header__btn-log {
+	border-radius: 10px;
+	border: 1px solid #fa6400;
+	padding: 13px 45px;
+	color: #fa6400;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+	transition: all 0.3s;
+}
+
+.header__btn-log:hover {
+	color: #fff;
+	background: #fa6400;
+}
+
+.header__btn-sign {
+	border-radius: 10px;
+	background: #fa6400;
+	padding: 13px 67px;
+	color: #fff;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+	transition: all 0.3s;
+	border: 1px solid #fa6400;
+	margin-left: 20px;
+}
+
+.header__btn-sign:hover {
+	color: #fa6400;
+	background: transparent;
+}
+
+.header__bottom {
+	display: flex;
+}
+.header__category {
+	display: flex;
+	align-items: center;
+	padding: 28px 0 10px;
+}
+
+.header__category + .header__category {
+	margin-left: 30px;
+}
+
+.header__category-text {
+	margin-left: 6px;
+}
+
+.info {
+	padding: 60px 0 100px;
+}
+
+.info__wrapper {
+	background-image: url('../images/info-bg1.jpg');
+	background-repeat: no-repeat;
+	border-radius: 14px;
+	padding-right: 80px;
+}
+
+.info__inner {
+	border-radius: 14px;
+	border: 1px solid #000;
+	background-image: url('../images/player.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right;
+}
+
+.info__content {
+	max-width: 455px;
+	margin: 100px 0 100px 100px;
+}
+.info__content-title {
+	color: #fff;
+	font-family: 'Humnst777 Blk BT', sans-serif;
+	font-size: 60px;
+	font-style: italic;
+	font-weight: 800;
+	line-height: normal;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+}
+.info__content-descr {
+	color: #fff;
+	font-family: Inter;
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+.info__content-btn {
+	border-radius: 10px;
+	background: #fa6400;
+	padding: 13px 67px;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+	display: inline-block;
+}
+
+.info__content-btn:hover {
+	background: transparent;
+	color: #fa6400;
+    }
+
+.upcoming {
+	padding-bottom: 80px;
+}
+
+.title {
+	font-family: Inter;
+	font-size: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+.upcoming__inner {
+	display: flex;
+	align-items: start;
+	justify-content: space-between;
+}
+.upcoming__info {
+	padding: 20px;
+	border-radius: 14px;
+	background: #262630;
+	width: 805px;
+	z-index: 3;
+}
+.upcoming__category {
+	display: flex;
+	align-items: center;
+	padding: 15px 7px 15px 30px;
+	border-radius: 8px;
+	background: #3f3f4c;
+	margin-bottom: 10px;
+	justify-content: space-between;
+}
+
+.upcoming__category-left,
+.upcoming__category-right {
+	display: flex;
+	align-items: center;
+}
+
+.upcoming__category-left div + div {
+	margin-left: 98px;
+}
+
+.upcoming__category-text--avarage {
+	margin: 0 25px 0 25px;
+}
+
+.upcoming__category-text {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+}
+.upcoming__date {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 12px;
+	border-radius: 6px;
+	background: rgba(250, 100, 0, 0.36);
+	margin-bottom: 20px;
+}
+.upcoming__date-day {
+	margin-right: 9px;
+}
+
+.upcoming__match {
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+	justify-content: space-between;
+	border-radius: 6px;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.upcoming__match::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background-color: #3f3f4c;
+	bottom: -20px;
+	left: 0;
+}
+
+.upcoming__match-gray {
+	background-color: #3f3f4c;
+	z-index: -2;
+}
+
+.upcoming__left,
+.upcoming__right {
+	display: flex;
+	align-items: center;
+}
+
+.upcoming__time {
+	font-weight: 400;
+	margin-right: 96px;
+}
+.upcoming__club {
+	display: flex;
+	align-items: center;
+	padding-right: 30px;
+}
+
+.upcoming__club-name {
+	margin-left: 14px;
+}
+.upcoming__limit,
+.last__details-info--limit {
+	font-weight: 400;
+	color: #000815;
+	padding: 0 12px;
+	border-radius: 6px;
+	background: #fff;
+	position: relative;
+}
+
+.upcoming__limit:after {
+	content: '';
+	position: absolute;
+	width: 52px;
+	height: 23px;
+	border-radius: 6px;
+	top: 0;
+	left: 0;
+	background-color: #007026;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+}
+
+.upcoming__avarage {
+	font-weight: 400;
+	margin: 0 46px 0 75px;
+}
+.upcoming__players,
+.last__details-info--players {
+	display: flex;
+	align-items: center;
+}
+.upcoming__players-num {
+	margin-left: 10px;
+	font-weight: 400;
+}
+.upcoming__btn {
+	display: inline-block;
+	margin-top: 20px;
+	color: #fa6400;
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration-line: underline;
+}
+
+.last {
+	padding-bottom: 80px;
+}
+
+.last__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 30px;
+	border-radius: 14px;
+	background: #262630;
+	max-width: 805px;
+	position: relative;
+	z-index: 0;
+}
+
+.last__item + .last__item {
+	margin-top: 20px;
+}
+
+.last__club-date {
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+}
+.last__club-date--time {
+	margin-left: 10px;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+}
+.last__team {
+	display: flex;
+	align-items: center;
+}
+
+.last__team-name {
+	margin-left: 10px;
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.last__players-name {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+	padding-left: 22px;
+	position: relative;
+}
+
+.last__players-name + .last__players-name {
+	margin-top: 8px;
+}
+
+.last__players-name:nth-child(1)::before {
+	content: '';
+	position: absolute;
+	background-image: url('../images/gold.svg');
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+}
+
+.last__players-name:nth-child(2)::before {
+	content: '';
+	position: absolute;
+	background-image: url('../images/silver.svg');
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+}
+
+.last__players-name:nth-child(3)::before {
+	content: '';
+	position: absolute;
+	background-image: url('../images/bronze.svg');
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+}
+
+.last__details-info {
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+}
+.last__details-info--players {
+	margin-right: 55px;
+}
+
+.last__players-num {
+	margin-left: 8px;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.last__details-info--limit::after {
+	content: '';
+	position: absolute;
+	width: 52px;
+	height: 22px;
+	border-radius: 6px;
+	top: 0px;
+	left: 0;
+	background-color: #adadad;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+}
+
+.last__details-btn {
+	display: inline-block;
+	color: #bdbdbd;
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration: underline;
+	position: relative;
+	z-index: 30;
+}
+
+.last__btn-mob {
+	display: none;
+	position: absolute;
+	bottom: 10px;
+	color: #bdbdbd;
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+.clubs {
+	margin-bottom: 80px;
+	position: relative;
+}
+
+.page-scroll {
+    position: fixed; /* Зробіть елемент фіксованим */
+    right: 20px; /* Відстань від правого краю вікна переглядача */
+    bottom: 20px; /* Відстань від нижнього краю вікна переглядача */
+    transform: none; /* Попереднє перетворення більше не потрібно */
+}
+
+.clubs__items,
+.coaches__items {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	max-width: 805px;
+	margin-bottom: 30px;
+}
+.clubs__item,
+.coaches__item {
+	display: flex;
+	align-items: center;
+	border-radius: 14px;
+	background: #262630;
+}
+.clubs__item-img {
+	border-radius: 14px 0px 0px 14px;
+}
+.clubs__item-info {
+	margin-left: 20px;
+}
+.clubs__item-info--name {
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 500;
+}
+.clubs__item-info--city {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 6px 0;
+}
+.clubs__item-info--phone {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+}
+.clubs__buttons,
+.coaches__buttons {
+	display: flex;
+	align-items: center;
+}
+
+.clubs__buttons-add {
+	padding: 12px 54px;
+}
+
+.clubs__buttons-add,
+.coaches__buttons-add {
+	color: #fff;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 10px;
+	background: #fa6400;
+	margin-right: 20px;
+	border: 1px solid #fa6400;
+	transition: all 0.3s;
+}
+
+.clubs__buttons-add:hover,
+.coaches__buttons-add:hover {
+	background: transparent;
+	color: #fa6400;
+}
+
+.clubs__buttons-all,
+.coaches__buttons-all {
+	color: #fa6400;
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration-line: underline;
+}
+
+.coaches {
+	margin-bottom: 100px;
+}
+
+.coaches__item {
+	padding: 14px;
+}
+.coaches__item-img {
+	margin-right: 14px;
+}
+.coaches__item-info {
+	position: relative;
+	padding-left: 14px;
+}
+
+.coaches__item-info::before {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 108px;
+	background: #3f3f4c;
+	left: 0;
+	top: -1px;
+}
+
+.coaches__item-info--rate {
+	display: inline-block;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 0 12px;
+	border-radius: 6px;
+	background: #3f3f4c;
+	margin-bottom: 8px;
+}
+.coaches__item-info--name {
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: 6px;
+}
+.coaches__item-info--club {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 6px;
+}
+
+.coaches__item-info--city span,
+.coaches__item-info--club span {
+	margin-right: 6px;
+}
+.coaches__item-info--city {
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.coaches__buttons-add {
+	padding: 12px 38px;
+}
+
+.footer {
+	border-radius: 14px 14px 0px 0px;
+	background: #262630;
+	padding: 40px 0 20px;
+}
+
+.footer__inner {
+	display: flex;
+	align-items: start;
+	justify-content: space-between;
+	padding-bottom: 100px;
+}
+.footer__logo {
+	margin-right: 122px;
+	display: block;
+}
+.footer__tour {
+	margin-right: 105px;
+}
+.footer__tour-link {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.footer__tour-item + .footer__tour-item {
+	margin-top: 24px;
+}
+
+.footer__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+}
+
+.footer__about {
+	margin-right: 135px;
+}
+.footer__about-link {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.footer__about-item + .footer__about-item {
+	margin-top: 24px;
+}
+
+.footer__contacts {
+	margin-right: 95px;
+}
+.footer__contacts-title {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 24px;
+}
+.footer__contacts-mail {
+	display: block;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 24px;
+}
+.footer__cantacts-phone {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.footer__social-title {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.footer__about-link--nowrap {
+	white-space: nowrap;
+}
+
+.footer__social-link {
+	display: inline-block;
+	transition: all 0.3s;
+}
+
+.footer__social-link:hover {
+	transform: scale(1.2);
+}
+
+.footer__social-link + .footer__social-link {
+	margin-left: 15px;
+}
+.footer__copy {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 130%;
+	padding-top: 10px;
+	position: relative;
+}
+
+.footer__copy::before{
+	content: "";
+	position: absolute;	
+	width: 100%;
+	height: 1px;
+	background-color: #3f3f4c;
+	top: 0;
+}
+
+@media (max-width: 1150px) {
+	.info {
+		padding-bottom: 60px;
+	}
+	.info__content {
+		max-width: 350px;
+	}
+	.info__content-title {
+		font-size: 45px;
+	}
+
+	.info__content-descr {
+		font-size: 20px;
+	}
+
+	.title {
+		font-size: 25px;
+	}
+
+	.upcoming__img {
+		display: none;
+	}
+}
+
+@media (max-width: 1100px) {
+	.footer__contacts {
+		margin-right: 50px;
+	}
+	.footer__about {
+		margin-right: 60px;
+	}
+	.footer__logo {
+		margin-right: 60px;
+	}
+
+	.footer__tour {
+		margin-right: 60px;
+	}
+}
+
+@media (max-width: 975px) {
+	.burger-btn {
+		display: block;
+	}
+
+	.info__wrapper {
+		padding-right: 0;
+	}
+	
+	.header__mob {
+		position: absolute;
+		display: block;
+		top: 0;
+		right: 0;
+		background: #3f3f4c;
+		width: 100%;
+		padding-left: 25px;
+		padding-bottom: 20px;
+		left: -100%;
+		z-index: 10;
+		transition: all 0.5s;
+	}
+
+	.header.open .header__mob,
+	.header.open .header__label {
+		transform: translateX(100%);
+	}
+
+	.header__bottom {
+		top: 65px;
+	}
+
+	.header__langs {
+		display: none;
+	}
+
+	.header__buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.header__btn-sign {
+		padding: 13px 45px;
+	}
+
+	.header__btn-all {
+		margin: 0;
+	}
+
+	.header__category {
+		position: relative;
+		justify-content: center;
+		text-align: left;
+	}
+
+	.header__category-text {
+		text-align: right;
+	}
+
+	.header__top-right {
+		top: 365px;
+	}
+
+	.header__label {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 20px 0 20px 0;
+		background: #3f3f4c;
+		width: 100%;
+		padding-left: 25px;
+		display: flex;
+		justify-content: center;
+		left: -100%;
+		transition: all 0.5s;
+	}
+
+	.header__langs-mob {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		z-index: 30;
+	}
+
+	.header__search {
+		left: -40px;
+		position: relative;
+	}
+
+	.header__category + .header__category {
+		margin-left: 0px;
+	}
+	.info__content {
+		max-width: 300px;
+		margin: 80px 0 100px 80px;
+	}
+	.info__content-title {
+		font-size: 35px;
+	}
+
+	.info__content-descr {
+		font-size: 16px;
+	}
+	.page-scroll {
+		display: none;
+	}
+}
+
+@media (max-width: 870px) {
+	.info__content {
+		max-width: 200px;
+		margin: 60px 0 80px 60px;
+	}
+	.info__content-title {
+		font-size: 27px;
+	}
+
+	.info__content-btn {
+		padding: 13px 50px;
+	}
+	.footer__tour-link,
+	.footer__about-link,
+	.footer__contacts-title,
+	.footer__contacts-mail,
+	.footer__cantacts-phone {
+		font-size: 14px;
+	}
+	.footer__about {
+		margin-right: 40px;
+	}
+}
+@media (max-width: 780px) {
+	.coaches__item-img {
+		width: 85px;
+		height: 85px;
+	}
+	.coaches__item {
+		padding: 18px 14px;
+	}
+	.coaches__item-info::before {
+		height: 94px;
+	}
+
+	.coaches__item-info--rate {
+		font-size: 12px;
+		padding: 4px 15px;
+	}
+
+	.clubs__item-info--name,
+	.coaches__item-info--name,
+	.clubs__item-info--city,
+	.clubs__item-info--phone,
+	.coaches__item-info--club,
+	.coaches__item-info--city {
+		font-size: 14px;
+	}
+
+	.coaches__item-info--name {
+		font-weight: 600;
+	}
+	.clubs__item-img {
+		width: 150px;
+		height: 105px;
+	}
+
+	.footer {
+		padding: 20px 0 12px;
+	}
+	.footer__inner {
+		display: block;
+		padding-bottom: 16px;
+	}
+	.footer__info {
+		margin-bottom: 20px;
+	}
+
+	.footer__tour-item + .footer__tour-item {
+		margin-top: 20px;
+	}
+	.footer__about-item + .footer__about-item {
+		margin-top: 20px;
+	}
+
+	.footer__social-title {
+		display: none;
+	}
+
+	.footer__logo{
+		margin-right: 0;
+	}
+
+	.footer__info {
+		padding-top: 20px;
+		margin-top: 10px;
+		position: relative;
+		margin-right: 0;
+	}
+	.footer__info::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		left: 0;
+		background: #3f3f4c;
+		top: 0;
+		right: 0;
+	}
+	.footer__social{
+		margin-top: 32px;
+	}
+	.footer__copy{
+		font-size: 12px;
+	}
+}
+@media (max-width: 710px) {
+	.info__content {
+		max-width: 200px;
+		margin: 40px 0 60px 60px;
+	}
+	.upcoming__category-left div + div {
+		margin-left: 40px;
+	}
+	.upcoming__time {
+		margin-right: 40px;
+	}
+
+	.upcoming__match {
+		margin-bottom: 12px;
+	}
+
+	.upcoming__match::after {
+		bottom: -6px;
+	}
+
+	.clubs {
+		margin-bottom: 40px;
+	}
+
+	.clubs__items {
+		display: block;
+	}
+
+	.clubs__item + .clubs__item {
+		margin-top: 14px;
+	}
+
+	.clubs__item-info {
+		padding-right: 16px;
+	}
+
+	.coaches {
+		margin-bottom: 40px;
+	}
+
+	.coaches__items {
+		display: block;
+	}
+
+	.coaches__item + .coaches__item {
+		margin-top: 14px;
+	}
+}
+
+@media (max-width: 650px) {
+	.info__content {
+		max-width: 200px;
+		margin: 30px 0 60px 40px;
+	}
+	.info__content-title {
+		font-size: 27px;
+		margin-bottom: 4px;
+	}
+
+	.info__content-descr {
+		margin-bottom: 20px;
+	}
+
+	.info__content-btn {
+		padding: 13px 38px;
+	}
+	.upcoming {
+		padding-bottom: 42px;
+	}
+	.upcoming__category {
+		display: none;
+	}
+
+	.upcoming__info {
+		padding: 18px 6px 16px;
+	}
+
+	.upcoming__btn {
+		margin: 0;
+	}
+
+	.upcoming__avarage {
+		margin: 0 20px;
+	}
+	.info {
+		padding: 30px 0 40px;
+	}
+	.info__inner {
+		object-fit: cover;
+	}
+	.info__content {
+		max-width: 165px;
+		margin: 30px 0 30px 30px;
+	}
+	.info__content-title {
+		font-size: 20px;
+	}
+
+	.info__content-descr {
+		margin-bottom: 12px;
+	}
+}
+
+@media (max-width: 600px) {
+	.last {
+		padding-bottom: 40px;
+	}
+	.last__item {
+		flex-wrap: wrap;
+	}
+	.last__players {
+		order: 3;
+	}
+	.last__details-info {
+		flex-direction: column;
+		align-items: start;
+		margin-bottom: 0;
+	}
+
+	.last__details-info--players {
+		margin-bottom: 10px;
+		margin-right: 10px;
+	}
+
+	.last__details-info--players img {
+		width: 20px;
+		height: 20px;
+	}
+
+	.last__details-info--limit {
+		font-size: 12px;
+		padding: 0 11px;
+	}
+
+	last__details-info--limit::after {
+		width: 10px;
+		height: 20px;
+	}
+
+	.last__players-num {
+		font-size: 14px;
+	}
+
+	.last__btn-mob {
+		display: block;
+	}
+
+	.last__details-btn {
+		display: none;
+	}
+
+	.last__club-date {
+		margin-bottom: 12px;
+	}
+	.last__club-date img {
+		width: 11px;
+		height: 15px;
+	}
+	.last__club-date--time {
+		font-size: 14px;
+		margin-left: 6px;
+	}
+	.last__team-name {
+		font-size: 14px;
+	}
+	.last__team-logo {
+		width: 20px;
+		height: 20px;
+	}
+	.last__details-info--limit {
+		font-size: 12px;
+		padding: 2px 11px;
+	}
+	.last__details-info--limit:after {
+		width: 44px;
+		height: 22px;
+	}
+}
+
+@media (max-width: 530px) {
+	.upcoming__date {
+		margin-bottom: 16px;
+	}
+	.upcoming__match {
+		padding: 0 8px;
+	}
+	.clubs__buttons,
+	.coaches__buttons {
+		flex-direction: column-reverse;
+		align-items: start;
+	}
+	.clubs__buttons-add,
+	.coaches__buttons-add {
+		margin-top: 16px;
+		font-size: 14px;
+		width: 100%;
+	}
+	.clubs__buttons-all,
+	.coaches__buttons-all {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 500px) {
+	.header__top {
+		padding: 9px 0;
+	}
+	.header__category {
+		justify-content: start;
+	}
+	.header__buttons {
+		justify-content: start;
+	}
+	.header__label {
+		justify-content: start;
+	}
+	.logo img {
+		padding: 9px 0;
+		width: 80%;
+		height: 80%;
+	}
+}
+
+@media (max-width: 480px) {
+	.header__input {
+		width: 80%;
+	}
+	.upcoming__time {
+		font-size: 14px;
+		margin-right: 8px;
+	}
+	.title {
+		font-size: 18px;
+		margin-bottom: 18px;
+	}
+	.upcoming__club-logo {
+		width: 20px;
+		height: 20px;
+	}
+	.upcoming__club-name {
+		margin-left: 6px;
+		font-size: 14px;
+	}
+	.upcoming__avarage {
+		margin: 0 6px;
+		font-size: 14px;
+	}
+
+	.upcoming__players img {
+		width: 20px;
+		height: 20px;
+	}
+	.upcoming__players-num {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 462px) {
+	.last__item + .last__item {
+		margin-top: 16px;
+	}
+	.last__players {
+		margin: 16px 0;
+	}
+}
+
+@media (max-width: 375px) {
+	.last__item {
+		padding: 16px;
+	}
+	.header__input::placeholder {
+		font-size: 14px;
+	}
+
+	.header__langs-mob {
+		margin-right: 40px;
+	}
+	.header__input {
+		width: 75%;
+	}
+	.upcoming__club {
+		padding-right: 7px;
+	}
+}

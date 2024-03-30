@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thai</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="icon" type="image/png" href="./images/logo.svg">
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header" id="scroll">
+    <div class="header__wrapper">
+      <div class="container">
+        <div class="header__top">
+          <div class="header__top-left">
+            <a class="logo" href="#">
+              <img class="logo__img" src="./images/logo.svg" alt="">
+            </a>
+            <label class="header__label">
+              <input class="header__input" type="text" placeholder="Search for a player">
+              <button class="header__search">
+                <img src="./images/search.svg" alt="">
+              </button>
+            </label>
+          </div>
+          <div class="header__top-right header__mob">
+            <select class="header__langs" onchange="changeLanguage(this)">
+              <option value="en">EN</option>
+              <option value="ru" selected>RUS</option>
+              <option value="th">ไทย</option>
+            </select>
+            <div class="header__buttons">
+              <button class="header__btn-log">
+                Войти
+              </button>
+              <button class="header__btn-sign">
+                Регистрация
+              </button>
+            </div>
+          </div>
+          <button class="burger-btn" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header__bottom header__mob">
+        <a class="header__category">
+          <img class="header__category-icon" src="./images/tour.svg" alt="">
+          <p class="header__category-text">
+            Турниры
+          </p>
+          <select class="header__langs-mob">
+            <option value="en" selected>EN</option>
+            <option value="ru">RUS</option>
+            <option value="th">ไทย</option>
+          </select>
+        </a>
+        <a class="header__category">
+          <img class="header__category-icon" src="./images/clubs.svg" alt="">
+          <p class="header__category-text">
+            Клубы
+          </p>
+        </a>
+        <a class="header__category">
+          <img class="header__category-icon" src="./images/players.svg" alt="">
+          <p class="header__category-text">
+            Игроки
+          </p>
+        </a>
+        <a class="header__category">
+          <img class="header__category-icon" src="./images/train.svg" alt="">
+          <p class="header__category-text">
+            Тренировки
+          </p>
+        </a>
+        <a class="header__category">
+          <img class="header__category-icon" src="./images/about.svg" alt="">
+          <p class="header__category-text">
+            О Нас
+          </p>
+        </a>
+      </div>
+    </div>
+  </header>
+  <section class="info">
+      <div class="container">
+        <div class="info__wrapper">
+          <div class="info__inner">
+            <div class="info__content">
+              <h1 class="info__content-title">
+                THAILAND <br> TABLE TENNIS
+                LEAGUE
+              </h1>
+              <div class="info__content-descr">
+                Play. Improve. Enjoy
+              </div>
+              <a class="info__content-btn" href="#">
+                Подробнее
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  
+    <section class="upcoming">
+      <div class="container">
+        <h3 class="upcoming__title title">
+          ближайшие турниры
+        </h3>
+        <div class="upcoming__inner">
+          <div class="upcoming__info">
+            <div class="upcoming__category">
+              <div class="upcoming__category-left">
+                <div class="upcoming__category-text">
+                  Время
+                </div>
+                <div class="upcoming__category-text">
+                  Клуб
+                </div>
+              </div>
+              <div class="upcoming__category-right">
+                <div class="upcoming__category-text">
+                  Ограничения
+                </div>
+                <div class="upcoming__category-text upcoming__category-text--avarage">
+                  Рейтинг
+                </div>
+                <div class="upcoming__category-text">
+                  Игроки
+                </div>
+              </div>
+            </div>
+            <div class="upcoming__date">
+              <div class="upcoming__date-day">
+                Среда
+              </div>
+              <div class="upcoming__date-num">
+                10.01.2024
+              </div>
+            </div>
+            <div class="upcoming__match upcoming__match-gray">
+              <div class="upcoming__left">
+                <div class="upcoming__time">
+                  11:00
+                </div>
+                <div class="upcoming__club">
+                  <img class="upcoming__club-logo" src="./images/logo-1.png" alt="">
+                  <div class="upcoming__club-name">
+                    Пятница
+                  </div>
+                </div>
+              </div>
+              <div class="upcoming__right">
+                <div class="upcoming__limit">
+                  277
+                </div>
+                <div class="upcoming__avarage">
+                  344
+                </div>
+                <div class="upcoming__players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="upcoming__players-num">
+                    9
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming__match">
+              <div class="upcoming__left">
+                <div class="upcoming__time">
+                  11:00
+                </div>
+                <div class="upcoming__club">
+                  <img class="upcoming__club-logo" src="./images/logo-2.png" alt="">
+                  <div class="upcoming__club-name">
+                    TTL-Савёл
+                  </div>
+                </div>
+              </div>
+              <div class="upcoming__right">
+                <div class="upcoming__limit">
+                  277
+                </div>
+                <div class="upcoming__avarage">
+                  344
+                </div>
+                <div class="upcoming__players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="upcoming__players-num">
+                    9
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming__match">
+              <div class="upcoming__left">
+                <div class="upcoming__time">
+                  11:00
+                </div>
+                <div class="upcoming__club">
+                  <img class="upcoming__club-logo" src="./images/logo-3.png" alt="">
+                  <div class="upcoming__club-name">
+                    HurricaneTT
+                  </div>
+                </div>
+              </div>
+              <div class="upcoming__right">
+                <div class="upcoming__limit">
+                  277
+                </div>
+                <div class="upcoming__avarage">
+                  344
+                </div>
+                <div class="upcoming__players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="upcoming__players-num">
+                    9
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming__match">
+              <div class="upcoming__left">
+                <div class="upcoming__time">
+                  11:00
+                </div>
+                <div class="upcoming__club">
+                  <img class="upcoming__club-logo" src="./images/logo-4.png" alt="">
+                  <div class="upcoming__club-name">
+                    TTL-Савёл
+                  </div>
+                </div>
+              </div>
+              <div class="upcoming__right">
+                <div class="upcoming__limit">
+                  277
+                </div>
+                <div class="upcoming__avarage">
+                  344
+                </div>
+                <div class="upcoming__players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="upcoming__players-num">
+                    9
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming__match">
+              <div class="upcoming__left">
+                <div class="upcoming__time">
+                  11:00
+                </div>
+                <div class="upcoming__club">
+                  <img class="upcoming__club-logo" src="./images/logo-5.png" alt="">
+                  <div class="upcoming__club-name">
+                    HurricaneTT
+                  </div>
+                </div>
+              </div>
+              <div class="upcoming__right">
+                <div class="upcoming__limit">
+                  277
+                </div>
+                <div class="upcoming__avarage">
+                  344
+                </div>
+                <div class="upcoming__players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="upcoming__players-num">
+                    9
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming__date">
+              <div class="upcoming__date-day">
+                Пятница
+              </div>
+              <div class="upcoming__date-num">
+                10.01.2024
+              </div>
+            </div>
+            <div class="upcoming__match">
+              <div class="upcoming__left">
+                <div class="upcoming__left">
+                  <div class="upcoming__time">
+                    11:00
+                  </div>
+                  <div class="upcoming__club">
+                    <img class="upcoming__club-logo" src="./images/logo-1.png" alt="">
+                    <div class="upcoming__club-name">
+                      HurricaneTT
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="upcoming__right">
+                <div class="upcoming__right">
+                  <div class="upcoming__limit">
+                    277
+                  </div>
+                  <div class="upcoming__avarage">
+                    344
+                  </div>
+                  <div class="upcoming__players">
+                    <img src="./images/user.svg" alt="">
+                    <div class="upcoming__players-num">
+                      9
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming__match">
+              <div class="upcoming__left">
+                <div class="upcoming__time">
+                  11:00
+                </div>
+                <div class="upcoming__club">
+                  <img class="upcoming__club-logo" src="./images/logo-2.png" alt="">
+                  <div class="upcoming__club-name">
+                    TTL-Савёл
+                  </div>
+                </div>
+              </div>
+              <div class="upcoming__right">
+                <div class="upcoming__limit">
+                  277
+                </div>
+                <div class="upcoming__avarage">
+                  344
+                </div>
+                <div class="upcoming__players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="upcoming__players-num">
+                    9
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming__match">
+              <div class="upcoming__left">
+                <div class="upcoming__time">
+                  11:00
+                </div>
+                <div class="upcoming__club">
+                  <img class="upcoming__club-logo" src="./images/logo-3.png" alt="">
+                  <div class="upcoming__club-name">
+                    HurricaneTT
+                  </div>
+                </div>
+              </div>
+              <div class="upcoming__right">
+                <div class="upcoming__limit">
+                  277
+                </div>
+                <div class="upcoming__avarage">
+                  344
+                </div>
+                <div class="upcoming__players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="upcoming__players-num">
+                    9
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming__match">
+              <div class="upcoming__left">
+                <div class="upcoming__time">
+                  11:00
+                </div>
+                <div class="upcoming__club">
+                  <img class="upcoming__club-logo" src="./images/logo-4.png" alt="">
+                  <div class="upcoming__club-name">
+                    TTL-Савёл
+                  </div>
+                </div>
+              </div>
+              <div class="upcoming__right">
+                <div class="upcoming__limit">
+                  277
+                </div>
+                <div class="upcoming__avarage">
+                  344
+                </div>
+                <div class="upcoming__players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="upcoming__players-num">
+                    9
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upcoming__match">
+              <div class="upcoming__left">
+                <div class="upcoming__time">
+                  11:00
+                </div>
+                <div class="upcoming__club">
+                  <img class="upcoming__club-logo" src="./images/logo-5.png" alt="">
+                  <div class="upcoming__club-name">
+                    HurricaneTT
+                  </div>
+                </div>
+              </div>
+              <div class="upcoming__right">
+                <div class="upcoming__limit">
+                  277
+                </div>
+                <div class="upcoming__avarage">
+                  344
+                </div>
+                <div class="upcoming__players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="upcoming__players-num">
+                    9
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="upcoming__btn" href="#">
+              Смотреть еще
+            </a>
+          </div>
+          <img class="upcoming__img" src="./images/upcoming.png" alt="">
+        </div>
+      </div>
+    </section> 
+    <section class="last">
+      <div class="container">
+        <h3 class="last__title title">
+          ПОСЛЕДНИЕ ТУРНИРЫ
+        </h3>
+        <div class="last__items">
+          <div class="last__item">
+            <div class="last__club">
+              <div class="last__club-date">
+                <img src="./images/racket.svg" alt="">
+                <p class="last__club-date--time">
+                  Сегодня, Вт. 12:30 
+                </p>
+              </div>
+              <div class="last__team">
+                <img class="last__team-logo" src="./images/logo-1.png" alt="">
+                <div class="last__team-name">
+                  HurricaneTT
+                </div>
+              </div>
+            </div>
+            <div class="last__players">
+              <p class="last__players-name">
+                Tabakov Oleg
+              </p>
+              <p class="last__players-name">
+                Sharshakov Andrey
+              </p>
+              <p class="last__players-name">
+                Konev Vladimir
+              </p>
+            </div>
+            <div class="last__details">
+              <div class="last__details-info">
+                <div class="last__details-info--players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="last__players-num">
+                    9
+                  </div>
+                </div>
+                <div class="last__details-info--limit">
+                  277
+                </div>
+              </div>
+              <a class="last__details-btn" href="#">
+                Подробнее о турнире
+              </a>
+            </div>
+            <a class="last__btn-mob" href="#">
+              Подробнее о турнире
+            </a>
+          </div>
+          <div class="last__item">
+            <div class="last__club">
+              <div class="last__club-date">
+                <img src="./images/racket.svg" alt="">
+                <p class="last__club-date--time">
+                  Сегодня, Вт. 12:30 
+                </p>
+              </div>
+              <div class="last__team">
+                <img class="last__team-logo" src="./images/logo-2.png" alt="">
+                <div class="last__team-name">
+                  HurricaneTT
+                </div>
+              </div>
+            </div>
+            <div class="last__players">
+              <p class="last__players-name">
+                Tabakov Oleg
+              </p>
+              <p class="last__players-name">
+                Sharshakov Andrey
+              </p>
+              <p class="last__players-name">
+                Konev Vladimir
+              </p>
+            </div>
+            <div class="last__details">
+              <div class="last__details-info">
+                <div class="last__details-info--players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="last__players-num">
+                    9
+                  </div>
+                </div>
+                <div class="last__details-info--limit">
+                  277
+                </div>
+              </div>
+              <a class="last__details-btn" href="#">
+                Подробнее о турнире
+              </a>
+            </div>
+            <a class="last__btn-mob" href="#">
+              Подробнее о турнире
+            </a>
+          </div>
+          <div class="last__item">
+            <div class="last__club">
+              <div class="last__club-date">
+                <img src="./images/racket.svg" alt="">
+                <p class="last__club-date--time">
+                  Сегодня, Вт. 12:30 
+                </p>
+              </div>
+              <div class="last__team">
+                <img class="last__team-logo" src="./images/logo-3.png" alt="">
+                <div class="last__team-name">
+                  HurricaneTT
+                </div>
+              </div>
+            </div>
+            <div class="last__players">
+              <p class="last__players-name">
+                Tabakov Oleg
+              </p>
+              <p class="last__players-name">
+                Sharshakov Andrey
+              </p>
+              <p class="last__players-name">
+                Konev Vladimir
+              </p>
+            </div>
+            <div class="last__details">
+              <div class="last__details-info">
+                <div class="last__details-info--players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="last__players-num">
+                    9
+                  </div>
+                </div>
+                <div class="last__details-info--limit">
+                  277
+                </div>
+              </div>
+              <a class="last__details-btn" href="#">
+                Подробнее о турнире
+              </a>
+            </div>
+            <a class="last__btn-mob" href="#">
+              Подробнее о турнире
+            </a>
+          </div>
+          <div class="last__item">
+            <div class="last__club">
+              <div class="last__club-date">
+                <img src="./images/racket.svg" alt="">
+                <p class="last__club-date--time">
+                  Сегодня, Вт. 12:30 
+                </p>
+              </div>
+              <div class="last__team">
+                <img class="last__team-logo" src="./images/logo-4.png" alt="">
+                <div class="last__team-name">
+                  HurricaneTT
+                </div>
+              </div>
+            </div>
+            <div class="last__players">
+              <p class="last__players-name">
+                Tabakov Oleg
+              </p>
+              <p class="last__players-name">
+                Sharshakov Andrey
+              </p>
+              <p class="last__players-name">
+                Konev Vladimir
+              </p>
+            </div>
+            <div class="last__details">
+              <div class="last__details-info">
+                <div class="last__details-info--players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="last__players-num">
+                    9
+                  </div>
+                </div>
+                <div class="last__details-info--limit">
+                  277
+                </div>
+              </div>
+              <a class="last__details-btn" href="#">
+                Подробнее о турнире
+              </a>
+            </div>
+            <a class="last__btn-mob" href="#">
+              Подробнее о турнире
+            </a>
+          </div>
+          <div class="last__item">
+            <div class="last__club">
+              <div class="last__club-date">
+                <img src="./images/racket.svg" alt="">
+                <p class="last__club-date--time">
+                  Сегодня, Вт. 12:30
+                </p>
+              </div>
+              <div class="last__team">
+                <img class="last__team-logo" src="./images/logo-5.png" alt="">
+                <div class="last__team-name">
+                  HurricaneTT
+                </div>
+              </div>
+            </div>
+            <div class="last__players">
+              <p class="last__players-name">
+                Tabakov Oleg
+              </p>
+              <p class="last__players-name">
+                Sharshakov Andrey
+              </p>
+              <p class="last__players-name">
+                Konev Vladimir
+              </p>
+            </div>
+            <div class="last__details">
+              <div class="last__details-info">
+                <div class="last__details-info--players">
+                  <img src="./images/user.svg" alt="">
+                  <div class="last__players-num">
+                    9
+                  </div>
+                </div>
+                <div class="last__details-info--limit">
+                  277
+                </div>
+              </div>
+              <a class="last__details-btn" href="#">
+                Подробнее о турнире
+              </a>
+            </div>
+            <a class="last__btn-mob" href="#">
+              Подробнее о турнире
+            </a>
+          </div>
+        </div>
+      </div>
+    </section> 
+    <section class="clubs">
+      <div class="container">
+        <h3 class="clubs__title title">
+          КЛУБЫ
+        </h3>
+        <div class="clubs__items">
+          <div class="clubs__item">
+            <img class="clubs__item-img" src="./images/club-1.png" alt="">
+            <div class="clubs__item-info">
+              <div class="clubs__item-info--name">
+                TTL-Savel
+              </div>
+              <div class="clubs__item-info--city">
+                Bangkok
+              </div>
+              <a class="clubs__item-info--phone" href="tel:+79951195210">
+                +7(995) 119-5210
+              </a>
+            </div>
+          </div>
+          <div class="clubs__item">
+            <img class="clubs__item-img" src="./images/club-2.png" alt="">
+            <div class="clubs__item-info">
+              <div class="clubs__item-info--name">
+                TTL-Savel
+              </div>
+              <div class="clubs__item-info--city">
+                Bangkok
+              </div>
+              <a class="clubs__item-info--phone" href="tel:+79951195210">
+                +7(995) 119-5210
+              </a>
+            </div>
+          </div>
+          <div class="clubs__item">
+            <img class="clubs__item-img" src="./images/club-3.png" alt="">
+            <div class="clubs__item-info">
+              <div class="clubs__item-info--name">
+                TTL-Savel
+              </div>
+              <div class="clubs__item-info--city">
+                Bangkok
+              </div>
+              <a class="clubs__item-info--phone" href="tel:+79951195210">
+                +7(995) 119-5210
+              </a>
+            </div>
+          </div>
+          <div class="clubs__item">
+            <img class="clubs__item-img" src="./images/club-4.png" alt="">
+            <div class="clubs__item-info">
+              <div class="clubs__item-info--name">
+                TTL-Savel
+              </div>
+              <div class="clubs__item-info--city">
+                Bangkok
+              </div>
+              <a class="clubs__item-info--phone" href="tel:+79951195210">
+                +7(995) 119-5210
+              </a>
+            </div>
+          </div>
+          <div class="clubs__item">
+            <img class="clubs__item-img" src="./images/club-5.png" alt="">
+            <div class="clubs__item-info">
+              <div class="clubs__item-info--name">
+                TTL-Savel
+              </div>
+              <div class="clubs__item-info--city">
+                Bangkok
+              </div>
+              <a class="clubs__item-info--phone" href="tel:+79951195210">
+                +7(995) 119-5210
+              </a>
+            </div>
+          </div>
+          <div class="clubs__item">
+            <img class="clubs__item-img" src="./images/club-6.png" alt="">
+            <div class="clubs__item-info">
+              <div class="clubs__item-info--name">
+                TTL-Savel
+              </div>
+              <div class="clubs__item-info--city">
+                Bangkok
+              </div>
+              <a class="clubs__item-info--phone" href="tel:+79951195210">
+                +7(995) 119-5210
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="clubs__buttons">
+          <button class="clubs__buttons-add">
+            Добавить клуб
+          </button>
+          <a class="clubs__buttons-all" href="#">
+            Смотреть все клубы
+          </a>
+        </div>
+      </div>
+    </section> 
+    <section class="coaches">
+      <div class="container">
+        <div class="coaches__title title">
+          ТРЕНЕРЫ
+        </div>
+        <div class="coaches__items">
+          <div class="coaches__item">
+            <img class="coaches__item-img" src="./images/coach-1.png" alt="">
+            <div class="coaches__item-info">
+              <div class="coaches__item-info--rate">
+                748
+              </div>
+              <div class="coaches__item-info--name">
+                Петров Александр
+              </div>
+              <div class="coaches__item-info--club">
+               <span>Клуб:</span> PHUKET TT CLUB
+              </div>
+              <div class="coaches__item-info--city">
+                <span>Город::</span>Пхукет
+              </div>
+            </div>
+          </div>
+          <div class="coaches__item">
+            <img class="coaches__item-img" src="./images/coach-2.png" alt="">
+            <div class="coaches__item-info">
+              <div class="coaches__item-info--rate">
+                748
+              </div>
+              <div class="coaches__item-info--name">
+                Петров Александр
+              </div>
+              <div class="coaches__item-info--club">
+               <span>Клуб:</span> PHUKET TT CLUB
+              </div>
+              <div class="coaches__item-info--city">
+                <span>Город::</span>Пхукет
+              </div>
+            </div>
+          </div>
+          <div class="coaches__item">
+            <img class="coaches__item-img" src="./images/coach-3.png" alt="">
+            <div class="coaches__item-info">
+              <div class="coaches__item-info--rate">
+                748
+              </div>
+              <div class="coaches__item-info--name">
+                Петров Александр
+              </div>
+              <div class="coaches__item-info--club">
+               <span>Клуб:</span> PHUKET TT CLUB
+              </div>
+              <div class="coaches__item-info--city">
+                <span>Город::</span>Пхукет
+              </div>
+            </div>
+          </div>
+          <div class="coaches__item">
+            <img class="coaches__item-img" src="./images/coach-4.png" alt="">
+            <div class="coaches__item-info">
+              <div class="coaches__item-info--rate">
+                748
+              </div>
+              <div class="coaches__item-info--name">
+                Петров Александр
+              </div>
+              <div class="coaches__item-info--club">
+               <span>Клуб:</span> PHUKET TT CLUB
+              </div>
+              <div class="coaches__item-info--city">
+                <span>Город::</span>Пхукет
+              </div>
+            </div>
+          </div>
+          <div class="coaches__item">
+            <img class="coaches__item-img" src="./images/coach-5.png" alt="">
+            <div class="coaches__item-info">
+              <div class="coaches__item-info--rate">
+                748
+              </div>
+              <div class="coaches__item-info--name">
+                Петров Александр
+              </div>
+              <div class="coaches__item-info--club">
+               <span>Клуб:</span> PHUKET TT CLUB
+              </div>
+              <div class="coaches__item-info--city">
+                <span>Город::</span>Пхукет
+              </div>
+            </div>
+          </div>
+          <div class="coaches__item">
+            <img class="coaches__item-img" src="./images/coach-6.png" alt="">
+            <div class="coaches__item-info">
+              <div class="coaches__item-info--rate">
+                748
+              </div>
+              <div class="coaches__item-info--name">
+                Петров Александр
+              </div>
+              <div class="coaches__item-info--club">
+               <span>Клуб:</span> PHUKET TT CLUB
+              </div>
+              <div class="coaches__item-info--city">
+                <span>Город::</span>Пхукет
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="coaches__buttons">
+          <button class="coaches__buttons-add">
+            Стать тренером
+          </button>
+          <a class="coaches__buttons-all" href="#">
+            Смотреть всех тренеров
+          </a>
+        </div>
+        <a class="page-scroll" href="#scroll">
+          <img src="./images/scroll.svg" alt="">
+        </a>
+      </div>
+    </section>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a class="footer__logo">
+            <img class="footer__logo-img" src="./images/logo.svg" alt="">
+          </a>
+          <div class="footer__info">
+            <ul class="footer__tour">
+              <li class="footer__tour-item">
+                <a class="footer__tour-link">
+                  Турниры
+                </a>
+              </li>
+              <li class="footer__tour-item">
+                <a class="footer__tour-link">
+                  Клубы
+                </a>
+              </li>
+              <li class="footer__tour-item">
+                <a class="footer__tour-link">
+                  Игроки
+                </a>
+              </li>
+            </ul>
+            <ul class="footer__about">
+              <li class="footer__tour-item">
+                <a class="footer__about-link">
+                  Тренировки
+                </a>
+              </li>
+              <li class="footer__tour-item">
+                <a class="footer__about-link footer__about-link--nowrap">
+                  О Нас
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contacts">
+            <div class="footer__contacts-title">
+              Контакты
+            </div>
+            <a class="footer__contacts-mail" href="mailto:thailandttleague@gmail.com">
+              thailandttleague@gmail.com
+            </a>
+            <a class="footer__cantacts-phone" href="tel:+66951954053">
+              +66 95 195 4053
+            </a>
+          </div>
+          <div class="footer__social">
+            <div class="footer__social-title">
+              Социальные сети
+            </div>
+            <a class="footer__social-link" href="#">
+              <img src="./images/instagram.svg" alt="">
+            </a>
+            <a class="footer__social-link" href="#">
+              <img src="./images/facebook.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="footer__copy">
+          © 2024 Thailand TT League. Все права защищены
+        </div>
+      </div>
+    </footer> 
+
+
+  <script src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/languageSwitcher.js"></script>
+</body>
+
+</html>
